@@ -1,0 +1,28 @@
+machine:
+  java:
+    version: oraclejdk8
+  environment:
+    GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'
+
+dependencies:
+  pre:
+    - echo y | android update sdk --no-ui --all --filter extra-android-m2repository
+    - echo y | android update sdk --no-ui --all --filter build-tools-23.0.3
+    - chmod +x deploy_master.sh
+  cache_directories:
+    - ~/.android
+    - ~/android
+
+
+
+test:
+    override:
+      - (./gradlew testDebugUnitTest):
+          timeout: 500
+
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - ./deploy_master.sh
