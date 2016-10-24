@@ -1,4 +1,5 @@
 echo "Begin deploy feature s"
 echo "Begin deploy feature s"
 echo "Begin deploy feature s"
+echo "$CI_PULL_REQUESTS"
 echo "Begin deploy feature s"
