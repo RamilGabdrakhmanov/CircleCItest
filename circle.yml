@@ -27,6 +27,6 @@ deployment:
       - ./deploy_master.sh
 
   feature:
-    branch: /feature_*/
+    branch: /feature.*/
     commands:
       - ./deploy_feature.sh
