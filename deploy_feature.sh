@@ -1,4 +1,4 @@
-echo "Begin deploy feature"
-echo "Begin deploy feature"
-echo "Begin deploy feature"
-echo "Begin deploy feature"
+echo "Begin deploy feature s"
+echo "Begin deploy feature s"
+echo "Begin deploy feature s"
+echo "Begin deploy feature s"
