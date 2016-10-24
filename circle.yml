@@ -6,8 +6,6 @@ machine:
 
 dependencies:
   pre:
-    - echo y | android update sdk --no-ui --all --filter build-tools-24.0.3
-    - echo y | android update sdk --no-ui --all --filter android-24
     - chmod +x deploy_master.sh
     - chmod +x deploy_feature.sh
   cache_directories:
