@@ -6,14 +6,19 @@ machine:
 
 dependencies:
   pre:
-    - chmod +x deploy_master.sh deploy_feature.sh deploy_prerelease.sh deploy_release.sh
+    - chmod +x deploy_master.sh
+    - chmod +x deploy_feature.sh
   cache_directories:
     - ~/.android
     - ~/android
 
+
+
 test:
-  override:
-    - echo "SKIP TEST!"
+    override:
+      - (./gradlew testDebugUnitTest):
+          timeout: 500
+
 
 deployment:
   master:
@@ -25,13 +30,3 @@ deployment:
     branch: /feature.*/
     commands:
       - ./deploy_feature.sh
-
-  prerelease:
-    tag: /pre-release-.*/
-      commands:
-        - ./deploy_prerelease.sh
-
-  release:
-    tag: /release-.*/
-      commands:
-        - ./deploy_release.sh
