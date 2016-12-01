@@ -29,3 +29,13 @@ deployment:
     branch: /feature.*/
     commands:
       - ./deploy_feature.sh
+
+  prerelease:
+    tag: /pre-release-.*/
+    commands:
+      - ./deploy_prerelease.sh
+
+  release:
+    tag: /release-.*/
+    commands:
+      - ./deploy_release.sh
