@@ -6,12 +6,10 @@ machine:
 
 dependencies:
   pre:
-    - chmod +x deploy_master.sh
-    - chmod +x deploy_feature.sh
+    - chmod +x deploy_master.sh deploy_feature.sh deploy_prerelease.sh deploy_release.sh
   cache_directories:
     - ~/.android
     - ~/android
-
 
 test:
   override:
