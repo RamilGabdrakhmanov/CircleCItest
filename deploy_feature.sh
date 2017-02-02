@@ -1,7 +1,0 @@
-echo "Begin deploy feature"
-echo "Begin deploy feature"
-echo "$CI_PULL_REQUEST"
-echo "Begin deploy feature"
-echo "Begin deploy feature"
-echo "$CI_PULL_REQUESTS"
-echo "Begin deploy feature"
