@@ -1,3 +1,5 @@
+./gradlew assembleDebug assembleRelease
+
 echo "Begin deploy staging"
 echo "Begin deploy staging"
 echo "Begin deploy staging"
