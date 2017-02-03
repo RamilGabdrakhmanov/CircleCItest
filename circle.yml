@@ -19,7 +19,7 @@ dependencies:
 
 test:
   override:
-    - echo "TEST PASSED"
+    - ./gradlew testDebugUnitTest
 
 
 deployment:
