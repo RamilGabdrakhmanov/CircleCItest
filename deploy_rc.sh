@@ -15,5 +15,5 @@ echo "Begin deploy Release Candidate"
 export RC_NUMBER=$(echo $CIRCLE_TAG| cut -d'c' -f 2)
 echo $RC_NUMBER
 
-./gradlew assembleRcRelease
+./gradlew assembleRcDebug
 
