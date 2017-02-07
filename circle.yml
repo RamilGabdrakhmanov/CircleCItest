@@ -20,7 +20,7 @@ test:
   override:
     - ./gradlew jacocoTestReport
   post:
-    - bash <(curl -s https://codecov.io/bash)
+    - bash <(curl -s https://codecov.io/bash) -t e7c5f106-0254-4fdc-ac4b-ef4d1d40eb7a
 
 deployment:
   master:
