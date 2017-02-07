@@ -29,4 +29,10 @@ public class SomeVefyCleverCalculatorTest {
         assertFalse(someVefyCleverCalculator.isTwoIntEquals(4, 0));
     }
 
+    @Test
+    public void isZeroTest() throws Exception {
+        assertTrue(someVefyCleverCalculator.isZero(0));
+        assertFalse(someVefyCleverCalculator.isZero(1));
+    }
+
 }
