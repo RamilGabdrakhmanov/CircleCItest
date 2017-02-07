@@ -16,12 +16,11 @@ dependencies:
     - ~/.android
     - ~/android
 
-
 test:
   override:
     - ./gradlew jacocoTestReport
-     - bash <(curl -s https://codecov.io/bash)
-
+  post:
+    - bash <(curl -s https://codecov.io/bash)
 
 deployment:
   master:
