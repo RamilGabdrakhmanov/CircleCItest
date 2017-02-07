@@ -17,4 +17,8 @@ public class SomeVefyCleverCalculator {
             return false;
         }
     }
+
+    public boolean isZero(int a) {
+        return a == 0;
+    }
 }
