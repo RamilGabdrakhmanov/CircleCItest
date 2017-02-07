@@ -3,6 +3,7 @@ package io.ramil.circlecitestapp;
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -21,4 +22,11 @@ public class SomeVefyCleverCalculatorTest {
     public void isTwoIntEquals() throws Exception {
         assertTrue(someVefyCleverCalculator.isTwoIntEquals(4, 4));
     }
+
+    @Test
+    public void isTwoIntFirsZero() throws Exception {
+        assertFalse(someVefyCleverCalculator.isTwoIntEquals(0, 4));
+        assertFalse(someVefyCleverCalculator.isTwoIntEquals(4, 0));
+    }
+
 }
