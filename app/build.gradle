@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply from: './jacoco.gradle'
 
 ext {
     RC_NUMBER = System.getenv("RC_NUMBER") ?: "Indefined"
@@ -20,12 +21,29 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testCoverageEnabled true
+        }
+    }
+
+    testOptions {
+        unitTests.all {
+            jacoco {
+                includeNoLocationClasses = true
+            }
+        }
     }
 
     productFlavors {
         rc {
             applicationIdSuffix '.rc'
             versionName android.defaultConfig.versionName + "-RC-" + RC_NUMBER
+        }
+
+        prod {
         }
     }
 }
